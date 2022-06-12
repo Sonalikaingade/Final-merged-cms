@@ -3,6 +3,7 @@ package com.example.studentapp;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -28,6 +29,16 @@ public class adapter_myclub extends RecyclerView.Adapter<myviewholder> {
         holder.t1.setText(data.get(position).getHeader());
         holder.t2.setText(data.get(position).getDesc());
         holder.img.setImageResource(data.get(position).getImgname());
+
+
+
+        holder.t1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(view.getContext(),holder.t1.getText()+" club",Toast.LENGTH_SHORT).show();
+            }
+        });
+
     }
 
     @Override

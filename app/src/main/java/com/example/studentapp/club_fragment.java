@@ -44,63 +44,7 @@ public class club_fragment extends Fragment {
 
         adapter=new myadapter(dataqueue());
         rcv.setAdapter(adapter);
-        Button b1=v.findViewById(R.id.dept);
-        b1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                PopupMenu popupMenu=new PopupMenu(getContext(),b1);
-                popupMenu.getMenuInflater().inflate(R.menu.dept_popup_menu,popupMenu.getMenu());
-                popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
-                    @Override
-                    public boolean onMenuItemClick(MenuItem menuItem) {
-
-                        switch(menuItem.getItemId())
-                        {
-                            case R.id.it:
-                                Toast.makeText(getContext(),"ITtttttttttttt",Toast.LENGTH_LONG).show();
-                                break;
-                            case R.id.cse:
-                                Toast.makeText(getContext(),"Cseeeeee",Toast.LENGTH_LONG).show();
-                                break;
-                        }
-
-                        return true;
-                    }
-                });
-                popupMenu.show();
-
-            }
-        });
-        Button b=v.findViewById(R.id.type);
-        b.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                PopupMenu popupMenu=new PopupMenu(getContext(),b);
-                popupMenu.getMenuInflater().inflate(R.menu.type_popup_menu,popupMenu.getMenu());
-
-                popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
-                    @Override
-                    public boolean onMenuItemClick(MenuItem menuItem) {
-                        switch(menuItem.getItemId())
-                        {
-                            case R.id.item1:
-                                Toast.makeText(getContext(),"techical",Toast.LENGTH_LONG).show();
-                                break;
-                            case R.id.item2:
-                                Toast.makeText(getContext(),"nontechical",Toast.LENGTH_LONG).show();
-                                break;
-                        }
-
-
-
-
-                        return true;
-                    }
-                });
-                popupMenu.show();
-            }
-        });
-
+        
         return v;
     }
     public ArrayList<Model> dataqueue()
