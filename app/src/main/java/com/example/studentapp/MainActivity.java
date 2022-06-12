@@ -42,9 +42,9 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.nav_club:
                         fragment=new club_fragment();
                         break;
-                    case R.id.nav_myclub:
-                        fragment=new myclub_fragment();
-                        break;
+//                    case R.id.nav_myclub:
+//                        fragment=new myclub_fragment();
+//                        break;
 
                 }
 

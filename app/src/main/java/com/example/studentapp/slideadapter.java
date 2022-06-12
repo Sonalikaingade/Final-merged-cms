@@ -3,6 +3,7 @@ package com.example.studentapp;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -31,6 +32,13 @@ public class slideadapter extends RecyclerView.Adapter<slideadapter.sliderviewho
         {
             viewPager2.post(runnable);
         }
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(view.getContext(), "Clicked...",Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
     public slideadapter(List<slideitem> slideitems, ViewPager2 viewPager2) {
