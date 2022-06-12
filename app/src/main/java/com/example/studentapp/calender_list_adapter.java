@@ -4,6 +4,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -36,6 +37,15 @@ public class calender_list_adapter extends RecyclerView.Adapter<calender_list_ad
         String Club_name = Club_data[position];
         holder.EventName.setText(Event_name);
         holder.ClubName.setText(Club_name);
+
+
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(view.getContext(), holder.EventName.getText(), Toast.LENGTH_SHORT).show();
+            }
+        });
 
     }
 
