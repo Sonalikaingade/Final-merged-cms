@@ -36,7 +36,7 @@ public class slideadapter extends RecyclerView.Adapter<slideadapter.sliderviewho
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(view.getContext(), "Clicked...",Toast.LENGTH_SHORT).show();
+                Toast.makeText(view.getContext(), "Clicked....",Toast.LENGTH_SHORT).show();
             }
         });
     }
